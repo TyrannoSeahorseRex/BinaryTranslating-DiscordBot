@@ -35,3 +35,8 @@ class aclient(discord.Client):
     async def activity_change_loop(self):
         self.activity_index = (self.activity_index + 1) % len(self.activities)
         await self.change_presence(activity=self.activities[self.activity_index])
+        
+    @activity_change_loop.before_loop
+    async def before_activity_change_loop(self):
+        await self.wait_until_ready()
+        self.activities = [discord.Game(name=f"{len(self.guilds)} servers")] + self.activities
