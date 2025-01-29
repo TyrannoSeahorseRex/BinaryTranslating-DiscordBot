@@ -4,9 +4,7 @@ This Discord bot allows users to seamlessly **convert text to binary and vice ve
 
 ## Features  
 
-- 🔢 **Text to Binary Conversion** – Instantly convert any text into its binary representation.  
-- 💬 **Binary to Text Decoding** – Convert binary back into readable text.  
-- 🌍 **Multilingual Support** – Works in different languages for a global audience.  
+- 🔢 **Text to Binary Conversion** – Instantly convert any text into its binary representation.   
 - ⚡ **Fast and Efficient** – Provides real-time conversions in Discord channels.  
 
 ## Getting Started  
@@ -15,7 +13,6 @@ This Discord bot allows users to seamlessly **convert text to binary and vice ve
 2. **Use simple commands** to translate between text and binary.  
 
 ## Example Commands  
-
 - `/text-to-binary Hello` → `01001000 01100101 01101100 01101100 01101111`  
 
 ## Use Cases  
@@ -32,5 +29,6 @@ I built this bot to make binary translation easy and accessible **directly in Di
 
 - 🎨 Add an interactive UI for Discord.  
 - 🌍 Expand multilingual support.  
-- 🤖 Improve performance and response time.
-- 🗃️ Binary to text translation.
+- 📊 Improve performance and response time.
+- 💬 **Binary to Text Decoding** – Convert binary back into readable text.
+- 🤖 Our own discord bot to do this (Used to have one but decided to just share the code for it here)
