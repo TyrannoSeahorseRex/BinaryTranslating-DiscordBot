@@ -47,3 +47,15 @@ tree = app_commands.CommandTree(client)
 ####################################################################################################################################################################################
 ## TEXT TO BINARY COMMAND
 ####################################################################################################################################################################################
+
+@tree.command(name="text_to_binary", description="Translate text to binary!")
+@app_commands.describe(text = "Text you want to translate.")
+async def text_to_binary(interaction: discord.Interaction, text: str):
+  message = text
+  binary = " ".join(format(ord(c), "b") for c in message)
+  await interaction.response.send_message(f"Hi {interaction.user.mention}. Your message `'{text}'` in binary is: `{binary}`", ephemeral=True)
+  try: 
+      await interaction.user.create_dm()
+      await interaction.user.dm_channel.send(f"Hi {interaction.user.mention}. Your message `'{text}'` in binary is: `{binary}`")
+      await interaction.user.dm_channel.send("https://tenor.com/view/openbsd-puffy-binary-gif-22717840")
+  except: pass
