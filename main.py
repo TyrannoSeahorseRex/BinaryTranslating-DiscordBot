@@ -59,3 +59,10 @@ async def text_to_binary(interaction: discord.Interaction, text: str):
       await interaction.user.dm_channel.send(f"Hi {interaction.user.mention}. Your message `'{text}'` in binary is: `{binary}`")
       await interaction.user.dm_channel.send("https://tenor.com/view/openbsd-puffy-binary-gif-22717840")
   except: pass
+
+####################################################################################################################################################################################
+## RUN 
+####################################################################################################################################################################################
+
+TOKEN = 'ENTER YOUR TOKEN HERE'
+client.run(TOKEN)
