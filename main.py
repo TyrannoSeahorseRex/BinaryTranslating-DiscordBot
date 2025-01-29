@@ -40,3 +40,6 @@ class aclient(discord.Client):
     async def before_activity_change_loop(self):
         await self.wait_until_ready()
         self.activities = [discord.Game(name=f"{len(self.guilds)} servers")] + self.activities
+
+client = aclient()
+tree = app_commands.CommandTree(client)
