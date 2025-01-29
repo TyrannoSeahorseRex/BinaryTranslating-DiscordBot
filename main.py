@@ -30,3 +30,8 @@ class aclient(discord.Client):
             self.added = True
         print(f"We have logged in as User: {self.user}. ID: {self.user.id}.")
         await self.activity_change_loop.start()
+
+    @tasks.loop(seconds=10.0)
+    async def activity_change_loop(self):
+        self.activity_index = (self.activity_index + 1) % len(self.activities)
+        await self.change_presence(activity=self.activities[self.activity_index])
